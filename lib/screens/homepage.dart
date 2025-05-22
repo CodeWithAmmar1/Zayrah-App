@@ -14,13 +14,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Animate(
-          effects: [FadeEffect(), ScaleEffect()],
-          child: Text(
-            'E-Commerce App',
-            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
-          ),
-        ),
+        title: Text(
+          'E-Commerce App',
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        )
+            .animate()
+            .slideX(begin: -1.0, end: 0.0, duration: 600.ms)
+            .fadeIn(duration: 600.ms),
         centerTitle: true,
         backgroundColor: Colors.deepPurple,
       ),
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
           itemBuilder: (context, index) {
             final product = products[index];
             return GestureDetector(
-              onTapDown: (_) {
+              onTap: () {
                 setState(() {
                   tappedIndex = index;
                 });
