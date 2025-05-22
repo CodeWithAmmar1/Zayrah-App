@@ -7,7 +7,7 @@ final List<Product> products = [
     price: 90.99,
   ),
   Product(
-    name: "Watch",
+    name: "Men Watch",
     imageUrl: "https://media.istockphoto.com/id/1180244659/photo/luxury-watch-isolated-on-white-background-with-clipping-path-for-artwork-or-design-black.jpg?s=612x612&w=0&k=20&c=yeFNfkQmcVV9BTUlZO8vY_oLOQgDAt23LfCbF1e3fbI=",
     price: 490.99,
   ),

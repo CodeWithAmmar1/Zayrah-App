@@ -66,8 +66,8 @@ class _HomePageState extends State<HomePage> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey.shade200,
-                          blurRadius: 6,
-                          spreadRadius: 2,
+                          blurRadius: 2,
+                          spreadRadius: 1,
                         ),
                       ],
                     ),
@@ -88,21 +88,39 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Text(
-                            product.name,
-                            style: GoogleFonts.cinzel(fontWeight: FontWeight.bold,fontSize: 15),
+                        Container(
+                          
+                          decoration: BoxDecoration(
+
+  borderRadius: BorderRadius.only(
+       topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16),
+                      bottomLeft: Radius.circular(16),
+                      bottomRight: Radius.circular(16),
+                    ),
+                          color: Colors.deepPurple,
+                          ),
+                          child: Column(
+                            children: [
+                              SizedBox(height: 10,),
+                              Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                                child: Text(
+                                  product.name,
+                                  style: GoogleFonts.cinzel(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.white),
+                                ),
+                              ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: Text(
+                              ' \$${product.price.toStringAsFixed(2)}',
+                              style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                            ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Text(
-                            ' \$${product.price.toStringAsFixed(2)}',
-                            style: TextStyle(color: Colors.deepPurpleAccent,fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        SizedBox(height: 8),
                       ],
                     ),
                   ),
