@@ -1,5 +1,6 @@
 import 'package:app/data/data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,7 +13,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('E-Commerce App'),centerTitle: true,backgroundColor: Colors.deepPurple,),
+      appBar: AppBar(
+        title: Animate(
+          effects: [FadeEffect(), ScaleEffect()],
+          child: Text(
+            'E-Commerce App',
+            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurple,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
@@ -21,7 +32,7 @@ class _HomePageState extends State<HomePage> {
             crossAxisCount: 2,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
-            childAspectRatio: 0.75,
+            childAspectRatio: 0.95,
           ),
           itemBuilder: (context, index) {
             final product = products[index];
@@ -48,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                         color: Colors.grey.shade200,
                         blurRadius: 6,
                         spreadRadius: 2,
-                      )
+                      ),
                     ],
                   ),
                   child: Column(
@@ -56,7 +67,9 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Expanded(
                         child: ClipRRect(
-                          borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(16),
+                          ),
                           child: Image.network(
                             product.imageUrl,
                             fit: BoxFit.contain,
@@ -65,11 +78,17 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(product.name, style: TextStyle(fontWeight: FontWeight.bold)),
+                        child: Text(
+                          product.name,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text('\$${product.price.toStringAsFixed(2)}', style: TextStyle(color: Colors.green)),
+                        child: Text(
+                          '\$${product.price.toStringAsFixed(2)}',
+                          style: TextStyle(color: Colors.green),
+                        ),
                       ),
                       SizedBox(height: 8),
                     ],
