@@ -87,16 +87,16 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: Text(
                             product.name,
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                            style: GoogleFonts.cinzel(fontWeight: FontWeight.bold,fontSize: 18),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: Text(
-                            '\$${product.price.toStringAsFixed(2)}',
+                            ' \$${product.price.toStringAsFixed(2)}',
                             style: TextStyle(color: Colors.green),
                           ),
                         ),

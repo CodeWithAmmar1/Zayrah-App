@@ -13,7 +13,7 @@ final List<Product> products = [
   ),
   Product(
     name: "Backpack",
-    imageUrl: "https://media.istockphoto.com/id/1441185190/photo/man-in-a-blue-jeans-and-black-boots-sits-on-a-chair-with-a-brown-mens-shoulder-leather-bag.jpg?s=612x612&w=0&k=20&c=AIGEQF8lUEhm7KEYCaUazgHA66NhED1b2lCAPB0ZB2U=",
+    imageUrl: "https://www.istockphoto.com/photo/big-bag-gm508119781-45382268?searchscope=image%2Cfilm",
     price: 390.99,
   ),
   Product(
