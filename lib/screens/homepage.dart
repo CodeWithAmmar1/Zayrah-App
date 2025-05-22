@@ -12,8 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int? tappedIndex;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
