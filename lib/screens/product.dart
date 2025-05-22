@@ -32,16 +32,19 @@ class Product extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
-                height: MediaQuery.sizeOf(context).height * 0.4,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage(image)),
-                ),
-              )
-              .animate()
-              .slideY(begin: -0.08, end: 0.0, duration: 600.ms)
-              .fadeIn(duration: 600.ms),
+          Hero(
+            tag: name,
+            child: Container(
+                  height: MediaQuery.sizeOf(context).height * 0.4,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: NetworkImage(image)),
+                  ),
+                )
+                .animate()
+                .slideY(begin: -0.08, end: 0.0, duration: 600.ms)
+                .fadeIn(duration: 600.ms),
+          ),
           Expanded(
             child: Container(
               width: double.infinity,
