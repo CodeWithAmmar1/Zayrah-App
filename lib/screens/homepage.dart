@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                               top: Radius.circular(16),
                             ),
                          child:   Hero(
-  tag: product.name, // make sure this is unique
+  tag: product.name,
   child: Image.network(
     product.imageUrl,
     fit: BoxFit.contain,
