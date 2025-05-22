@@ -1,4 +1,5 @@
 import 'package:app/data/data.dart';
+import 'package:app/screens/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -15,9 +16,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'E-Commerce App',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        )
+              'E-Commerce App',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            )
             .animate()
             .slideX(begin: -0.05, end: 0.0, duration: 600.ms)
             .fadeIn(duration: 600.ms),
@@ -37,58 +41,69 @@ class _HomePageState extends State<HomePage> {
           itemBuilder: (context, index) {
             final product = products[index];
             return GestureDetector(
-            onTap: (){
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder:
+                            (context) => Product(
+                              image: product.imageUrl,
+                              price: product.price,
+                              name: product.name,
+                            ),
+                      ),
+                    );
 
-
-             //
-            },
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade200,
-                      blurRadius: 6,
-                      spreadRadius: 2,
-                    ),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Expanded(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.vertical(
-                          top: Radius.circular(16),
+                    //
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade200,
+                          blurRadius: 6,
+                          spreadRadius: 2,
                         ),
-                        child: Image.network(
-                          product.imageUrl,
-                          fit: BoxFit.contain,
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(16),
+                            ),
+                            child: Image.network(
+                              product.imageUrl,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            product.name,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text(
+                            '\$${product.price.toStringAsFixed(2)}',
+                            style: TextStyle(color: Colors.green),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        product.name,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        '\$${product.price.toStringAsFixed(2)}',
-                        style: TextStyle(color: Colors.green),
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                  ],
-                ),
-              ),
-            ) .animate()
-            .slideY(begin: -0.05, end: 0.0, duration: 600.ms)
-            .fadeIn(duration: 600.ms);
+                  ),
+                )
+                .animate()
+                .slideY(begin: -0.05, end: 0.0, duration: 600.ms)
+                .fadeIn(duration: 600.ms);
           },
         ),
       ),
