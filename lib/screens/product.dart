@@ -51,7 +51,7 @@ class Product extends StatelessWidget {
             child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.deepPurple.shade100,
+                    color: Colors.deepPurple,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40),
@@ -68,7 +68,7 @@ class Product extends StatelessWidget {
                                 name,
                                 style: GoogleFonts.cinzel(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontSize: 28,
                                 ),
                               )
@@ -77,28 +77,29 @@ class Product extends StatelessWidget {
                               .fadeIn(duration: 600.ms),
                         ),
                       ),
-                      Divider(thickness: 1, color: Colors.white),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                              "Price : $price",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
-                              ),
-                            )
-                            .animate()
-                            .slideX(begin: -0.078, end: 0.0, duration: 600.ms)
-                            .fadeIn(duration: 600.ms),
+                      Align(
+                           alignment: Alignment.topRight,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                                "Price : $price",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              )
+                              .animate()
+                              .slideX(begin: -0.078, end: 0.0, duration: 600.ms)
+                              .fadeIn(duration: 600.ms),
+                        ),
                       ),
-                      Divider(thickness: 1, color: Colors.white),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                               "Detail : ",
                               style: GoogleFonts.cinzel(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 18,
                               ),
                             )
@@ -112,7 +113,7 @@ class Product extends StatelessWidget {
                               "This is a high-quality product made from premium materials, designed for durability and comfort. Perfect for everyday use, it combines functionality with style. Whether you're shopping for yourself or as a gift, this item is a reliable choice that won’t disappoint.",
                               style: TextStyle(
                                 fontStyle: FontStyle.italic,
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 15,
                               ),
                             )
