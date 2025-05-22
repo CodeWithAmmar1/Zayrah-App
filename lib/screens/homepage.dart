@@ -90,14 +90,14 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: Text(
                             product.name,
-                            style: GoogleFonts.cinzel(fontWeight: FontWeight.bold,fontSize: 18),
+                            style: GoogleFonts.cinzel(fontWeight: FontWeight.bold,fontSize: 15),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: Text(
                             ' \$${product.price.toStringAsFixed(2)}',
-                            style: TextStyle(color: Colors.green),
+                            style: TextStyle(color: Colors.deepPurpleAccent,fontWeight: FontWeight.bold),
                           ),
                         ),
                         SizedBox(height: 8),
