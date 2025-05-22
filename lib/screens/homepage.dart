@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('E-Commerce App')),
+      appBar: AppBar(title: Text('E-Commerce App'),centerTitle: true,backgroundColor: Colors.deepPurple,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
