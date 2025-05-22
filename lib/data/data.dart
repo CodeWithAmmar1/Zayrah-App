@@ -12,8 +12,8 @@ final List<Product> products = [
     price: 490.99,
   ),
   Product(
-    name: "Big bag stock",
-    imageUrl: "https://www.istockphoto.com/photo/big-bag-gm508119781-45382268?searchscope=image%2Cfilm",
+    name: "Yellow suitcase",
+    imageUrl: "https://media.istockphoto.com/id/1400155112/photo/yellow-suitcase-flying-on-white-background.jpg?s=612x612&w=0&k=20&c=U5x1IIaOXIDZ-Q59mvDD4V-I8bWnFWZ7flh03Up3sZ4=",
     price: 390.99,
   ),
   Product(
