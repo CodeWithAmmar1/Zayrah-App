@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
               'Zayrah',
-              style: TextStyle(
+              style: GoogleFonts.cinzel(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
