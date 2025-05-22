@@ -105,10 +105,7 @@ class Product extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                           "This is a high-quality product made from premium materials, designed for durability and comfort. Perfect for everyday use, it combines functionality with style. Whether you're shopping for yourself or as a gift, this item is a reliable choice that won’t disappoint.",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 15),
                         )
                         .animate()
                         .slideX(begin: 0.078, end: 0.0, duration: 600.ms)
