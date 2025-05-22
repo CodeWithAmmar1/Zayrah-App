@@ -12,7 +12,7 @@ final List<Product> products = [
     price: 490.99,
   ),
   Product(
-    name: "Backpack",
+    name: "Big bag stock",
     imageUrl: "https://www.istockphoto.com/photo/big-bag-gm508119781-45382268?searchscope=image%2Cfilm",
     price: 390.99,
   ),
