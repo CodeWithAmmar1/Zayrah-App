@@ -2,6 +2,7 @@ import 'package:app/data/data.dart';
 import 'package:app/screens/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart' show GoogleFonts;
 
 class HomePage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
               'Zayrah',
               style: GoogleFonts.cinzel(
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.white,fontSize: 28
               ),
             )
             .animate()

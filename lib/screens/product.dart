@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Product extends StatelessWidget {
   final String image;
@@ -19,9 +20,9 @@ class Product extends StatelessWidget {
       appBar: AppBar(
         title: Text(
               "Product Detail",
-              style: TextStyle(
+               style: GoogleFonts.cinzel(
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+               color: Colors.white,fontSize: 28
               ),
             )
             .animate()
@@ -64,7 +65,7 @@ class Product extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                             name,
-                            style: TextStyle(
+                            style: GoogleFonts.cinzel(
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                               fontSize: 28,
@@ -91,7 +92,7 @@ class Product extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                           "Detail : ",
-                          style: TextStyle(
+                    style: GoogleFonts.cinzel(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                             fontSize: 18,
@@ -105,7 +106,9 @@ class Product extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                           "This is a high-quality product made from premium materials, designed for durability and comfort. Perfect for everyday use, it combines functionality with style. Whether you're shopping for yourself or as a gift, this item is a reliable choice that won’t disappoint.",
-                          style: TextStyle(color: Colors.black, fontSize: 15),
+                          style: TextStyle(
+                             fontStyle: FontStyle.italic,
+                            color: Colors.black, fontSize: 15),
                         )
                         .animate()
                         .slideX(begin: 0.078, end: 0.0, duration: 600.ms)
