@@ -17,7 +17,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.deepPurple.shade100,
       appBar: AppBar(
         title: Text(
               'Zayrah',
@@ -62,7 +61,8 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Container(
-                      decoration: BoxDecoration(border: Border.all(color:  Colors.deepPurple.shade100,) ,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.deepPurple.shade100),
                         borderRadius: BorderRadius.circular(16),
                         color: Colors.white,
                         boxShadow: [
