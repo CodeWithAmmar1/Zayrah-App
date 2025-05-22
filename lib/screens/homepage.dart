@@ -76,14 +76,13 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.vertical(
                               top: Radius.circular(16),
                             ),
-                         child:   Hero(
-  tag: product.name,
-  child: Image.network(
-    product.imageUrl,
-    fit: BoxFit.contain,
-  ),
-),
-
+                            child: Hero(
+                              tag: product.name,
+                              child: Image.network(
+                                product.imageUrl,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
                           ),
                         ),
                         Padding(
