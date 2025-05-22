@@ -16,13 +16,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.deepPurple.shade100,
+    return Scaffold(
+      backgroundColor: Colors.deepPurple.shade100,
       appBar: AppBar(
         title: Text(
               'Zayrah',
               style: GoogleFonts.cinzel(
                 fontWeight: FontWeight.bold,
-                color: Colors.white,fontSize: 28
+                color: Colors.white,
+                fontSize: 28,
               ),
             )
             .animate()
@@ -56,8 +58,6 @@ class _HomePageState extends State<HomePage> {
                             ),
                       ),
                     );
-
-                    //
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -89,35 +89,44 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Container(
-                          
                           decoration: BoxDecoration(
-
-  borderRadius: BorderRadius.only(
-       topLeft: Radius.circular(16),
-                      topRight: Radius.circular(16),
-                      bottomLeft: Radius.circular(16),
-                      bottomRight: Radius.circular(16),
-                    ),
-                          color: Colors.deepPurple,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(16),
+                              topRight: Radius.circular(16),
+                              bottomLeft: Radius.circular(16),
+                              bottomRight: Radius.circular(16),
+                            ),
+                            color: Colors.deepPurple,
                           ),
                           child: Column(
                             children: [
-                              SizedBox(height: 10,),
+                              SizedBox(height: 10),
                               Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8.0,
+                                ),
                                 child: Text(
                                   product.name,
-                                  style: GoogleFonts.cinzel(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.white),
+                                  style: GoogleFonts.cinzel(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text(
-                              ' \$${product.price.toStringAsFixed(2)}',
-                              style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          SizedBox(height: 8),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8.0,
+                                ),
+                                child: Text(
+                                  ' \$${product.price.toStringAsFixed(2)}',
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.amberAccent,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 8),
                             ],
                           ),
                         ),

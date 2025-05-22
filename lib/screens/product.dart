@@ -75,6 +75,7 @@ class Product extends StatelessWidget {
           .slideX(begin: -0.08, end: 0.0, duration: 600.ms)
           .fadeIn(duration: 600.ms),
         ),
+        Divider(),
         SizedBox(height: 10),
         Align(
           alignment: Alignment.centerRight,
@@ -108,7 +109,7 @@ class Product extends StatelessWidget {
           "This is a high-quality product crafted from premium materials, ensuring durability, comfort, and timeless style. Ideal for everyday use or as a thoughtful gift. Experience functionality and elegance in one package.",
           style: GoogleFonts.poppins(
             fontStyle: FontStyle.italic,
-            color: Colors.white.withOpacity(0.9),
+            color: Colors.white.withValues(alpha:  0.9),
             fontSize: 15,
             height: 1.4,
           ),
