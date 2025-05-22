@@ -50,7 +50,7 @@ class Product extends StatelessWidget {
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.deepPurple.shade200,
+                color: Colors.deepPurple.shade100,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(40),
                   topRight: Radius.circular(40),
@@ -116,7 +116,9 @@ class Product extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
+            ) .animate()
+                        .slideY(begin: 0.078, end: 0.0, duration: 600.ms)
+                        .fadeIn(duration: 600.ms),
           ),
         ],
       ),
