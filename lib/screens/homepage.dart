@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         )
             .animate()
-            .slideX(begin: -1.0, end: 0.0, duration: 600.ms)
+            .slideX(begin: -0.05, end: 0.0, duration: 600.ms)
             .fadeIn(duration: 600.ms),
         centerTitle: true,
         backgroundColor: Colors.deepPurple,
@@ -37,65 +37,58 @@ class _HomePageState extends State<HomePage> {
           itemBuilder: (context, index) {
             final product = products[index];
             return GestureDetector(
-              onTap: () {
-                setState(() {
-                  tappedIndex = index;
-                });
-              },
-              onTapUp: (_) {
-                setState(() {
-                  tappedIndex = null;
-                });
-              },
-              child: AnimatedScale(
-                scale: tappedIndex == index ? 0.95 : 1.0,
-                duration: Duration(milliseconds: 150),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade200,
-                        blurRadius: 6,
-                        spreadRadius: 2,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(16),
-                          ),
-                          child: Image.network(
-                            product.imageUrl,
-                            fit: BoxFit.contain,
-                          ),
+            onTap: (){
+
+
+             //
+            },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade200,
+                      blurRadius: 6,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(16),
+                        ),
+                        child: Image.network(
+                          product.imageUrl,
+                          fit: BoxFit.contain,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          product.name,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        product.name,
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text(
-                          '\$${product.price.toStringAsFixed(2)}',
-                          style: TextStyle(color: Colors.green),
-                        ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Text(
+                        '\$${product.price.toStringAsFixed(2)}',
+                        style: TextStyle(color: Colors.green),
                       ),
-                      SizedBox(height: 8),
-                    ],
-                  ),
+                    ),
+                    SizedBox(height: 8),
+                  ],
                 ),
               ),
-            );
+            ) .animate()
+            .slideY(begin: -0.05, end: 0.0, duration: 600.ms)
+            .fadeIn(duration: 600.ms);
           },
         ),
       ),
