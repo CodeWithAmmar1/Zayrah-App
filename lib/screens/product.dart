@@ -47,87 +47,83 @@ class Product extends StatelessWidget {
                 .slideY(begin: -0.08, end: 0.0, duration: 600.ms)
                 .fadeIn(duration: 600.ms),
           ),
-          Expanded(
-            child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40),
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Align(
-                        alignment: Alignment.topCenter,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                                name,
-                                style: GoogleFonts.cinzel(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                ),
-                              )
-                              .animate()
-                              .slideX(begin: -0.078, end: 0.0, duration: 600.ms)
-                              .fadeIn(duration: 600.ms),
-                        ),
-                      ),
-                      Align(
-                           alignment: Alignment.topRight,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                                "Price : $price",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                ),
-                              )
-                              .animate()
-                              .slideX(begin: -0.078, end: 0.0, duration: 600.ms)
-                              .fadeIn(duration: 600.ms),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                              "Detail : ",
-                              style: GoogleFonts.cinzel(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
-                            )
-                            .animate()
-                            .slideX(begin: -0.078, end: 0.0, duration: 600.ms)
-                            .fadeIn(duration: 600.ms),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                              "This is a high-quality product made from premium materials, designed for durability and comfort. Perfect for everyday use, it combines functionality with style. Whether you're shopping for yourself or as a gift, this item is a reliable choice that won’t disappoint.",
-                              style: TextStyle(
-                                fontStyle: FontStyle.italic,
-                                color: Colors.white,
-                                fontSize: 15,
-                              ),
-                            )
-                            .animate()
-                            .slideX(begin: 0.078, end: 0.0, duration: 600.ms)
-                            .fadeIn(duration: 600.ms),
-                      ),
-                    ],
-                  ),
-                )
-                .animate()
-                .slideY(begin: 0.078, end: 0.0, duration: 600.ms)
-                .fadeIn(duration: 600.ms),
+        Expanded(
+  child: Container(
+    width: double.infinity,
+    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+    decoration: BoxDecoration(
+      color: Colors.deepPurple,
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(40),
+        topRight: Radius.circular(40),
+      ),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Center(
+          child: Text(
+            name,
+            style: GoogleFonts.cinzel(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 28,
+              letterSpacing: 1.5,
+            ),
+          )
+          .animate()
+          .slideX(begin: -0.08, end: 0.0, duration: 600.ms)
+          .fadeIn(duration: 600.ms),
+        ),
+        SizedBox(height: 10),
+        Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            "Price: \$${price.toString()}",
+            style: GoogleFonts.poppins(
+              color: Colors.amberAccent,
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+            ),
+          )
+          .animate()
+          .slideX(begin: 0.08, end: 0.0, duration: 600.ms)
+          .fadeIn(duration: 600.ms),
+        ),
+        SizedBox(height: 20),
+        Text(
+          "Product Details",
+          style: GoogleFonts.cinzel(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 20,
+            letterSpacing: 1,
           ),
+        )
+        .animate()
+        .slideX(begin: -0.06, end: 0.0, duration: 600.ms)
+        .fadeIn(duration: 600.ms),
+        SizedBox(height: 10),
+        Text(
+          "This is a high-quality product crafted from premium materials, ensuring durability, comfort, and timeless style. Ideal for everyday use or as a thoughtful gift. Experience functionality and elegance in one package.",
+          style: GoogleFonts.poppins(
+            fontStyle: FontStyle.italic,
+            color: Colors.white.withOpacity(0.9),
+            fontSize: 15,
+            height: 1.4,
+          ),
+        )
+        .animate()
+        .slideY(begin: 0.06, end: 0.0, duration: 600.ms)
+        .fadeIn(duration: 600.ms),
+      ],
+    ),
+  )
+  .animate()
+  .slideY(begin: 0.1, end: 0.0, duration: 600.ms)
+  .fadeIn(duration: 600.ms),
+),
+
         ],
       ),
     );
