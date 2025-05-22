@@ -26,4 +26,14 @@ final List<Product> products = [
     imageUrl: "https://media.istockphoto.com/id/471565617/photo/black-and-red-air-jordan-sneaker.jpg?s=612x612&w=0&k=20&c=rlJ1ImnpznBnRNfz45IDRTfFRnfqRuYAdvJA8dQPBXM=",
     price: 490.99,
   ),
+  Product(
+    name: "Nike Shoes",
+    imageUrl: "https://media.istockphoto.com/id/471565617/photo/black-and-red-air-jordan-sneaker.jpg?s=612x612&w=0&k=20&c=rlJ1ImnpznBnRNfz45IDRTfFRnfqRuYAdvJA8dQPBXM=",
+    price: 490.99,
+  ),
+  Product(
+    name: "Nike Shoes",
+    imageUrl: "https://media.istockphoto.com/id/471565617/photo/black-and-red-air-jordan-sneaker.jpg?s=612x612&w=0&k=20&c=rlJ1ImnpznBnRNfz45IDRTfFRnfqRuYAdvJA8dQPBXM=",
+    price: 490.99,
+  ),
 ];
