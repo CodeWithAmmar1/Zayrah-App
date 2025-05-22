@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-              'E-Commerce App',
+              'Zayrah',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
