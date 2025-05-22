@@ -2,8 +2,7 @@ name: Flutter CI
 
 on:
   push:
-    branches: [ master ]  # or your main working branch
-
+    branches: [ master ] 
 jobs:
   build:
     runs-on: ubuntu-latest
